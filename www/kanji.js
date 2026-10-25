@@ -1,4 +1,4 @@
-// Megumi — Günlük kanji (JLPT N5 temel kanjileri, öğrenme sırasına göre)
+// Megumi Language — Günlük kanji (JLPT N5–N4, öğrenme sırasına göre)
 // c: kanji, tr / en: anlam, on: on'yomi (Çince kökenli okunuş, katakana),
 // kun: kun'yomi (Japonca okunuş, hiragana; parantez içi = okurigana),
 // ex: [kelime, okunuş, tr, en], m: [akılda tutma ipucu tr, en]

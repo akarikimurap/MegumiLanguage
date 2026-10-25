@@ -1,4 +1,4 @@
-// Megumi — içerik verisi (Türkçe ana dil, İngilizce yardımcı)
+// Megumi Language — içerik verisi (Türkçe ana dil, İngilizce yardımcı)
 // Her metin çifti: [Türkçe, English]
 
 // ---------- KANA ----------

@@ -1,4 +1,4 @@
-// Uygulama simgesi: "め" (Megumi) harfi, KanjiVG çizgileriyle beyaz kalın fırça izi.
+// Uygulama simgesi: "め" (Megumi Language) harfi, KanjiVG çizgileriyle beyaz kalın fırça izi.
 // assets/logo.svg ve assets/logo.png (1024×1024, şeffaf) üretir; @capacitor/assets bunları kullanır.
 // Kullanım: node tools/make-logo.mjs
 import fs from 'node:fs';

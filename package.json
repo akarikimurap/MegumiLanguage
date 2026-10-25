@@ -1,8 +1,8 @@
 {
-  "name": "megumi",
+  "name": "megumi-language",
   "version": "0.1.0-beta",
   "private": true,
-  "description": "Megumi — Türkçe (ve İngilizce) ile Japonca öğrenme uygulaması",
+  "description": "Megumi Language — Megumi Projesi'nin Türkçe (ve İngilizce) ile Japonca öğrenme uygulaması",
   "scripts": {
     "postinstall": "node -e \"require('fs').copyFileSync('node_modules/@capacitor/core/dist/capacitor.js','www/capacitor.js')\"",
     "serve": "npx http-server@14.1.1 www -p 5173 -c-1",

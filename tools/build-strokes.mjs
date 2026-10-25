@@ -1,4 +1,4 @@
-// KanjiVG'den Megumi'nin kullandığı tüm kana/kanjilerin çizgi verisini indirir ve www/strokes.js dosyasını üretir.
+// KanjiVG'den Megumi Language'in kullandığı tüm kana/kanjilerin çizgi verisini indirir ve www/strokes.js dosyasını üretir.
 // Kullanım:  node tools/build-strokes.mjs
 // kanji.js'e yeni kanji ekledikten sonra çalıştır. İndirilen SVG'ler tools/.kvg-cache içinde saklanır.
 import fs from 'node:fs';

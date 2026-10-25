@@ -1,12 +1,12 @@
-# Megumi (恵み) — Türkçe ile Japonca
+# Megumi Language (恵み) — Türkçe ile Japonca
 
-Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulaması. Tarayıcıda çalışır; Android için APK olarak da indirilebilir.
+**Megumi Language**, **Megumi Projesi**'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır; Android için APK olarak da indirilebilir.
 
-> 🧪 **Şu anki sürüm: Beta 0.1** — uygulama deneme aşamasında; hatalar olabilir.
+> 🧪 **Şu anki sürüm: Megumi Language Beta 0.1** — uygulama deneme aşamasında; hatalar olabilir.
 
 ## 📱 Telefona kurulum (APK)
 
-1. Bu deponun [**Releases**](../../releases) sayfasını aç ve en son sürümdeki `Megumi-….apk` dosyasını (ör. `Megumi-0.1-beta.apk`) telefonuna indir.
+1. Bu deponun [**Releases**](../../releases) sayfasını aç ve en son sürümdeki `MegumiLanguage-….apk` dosyasını (ör. `MegumiLanguage-0.1-beta.apk`) telefonuna indir.
 2. İndirilen dosyayı aç. Android ilk kez "bilinmeyen uygulamaları yükleme" izni ister; tarayıcına veya Dosyalar uygulamasına bu izni ver.
 3. **Güncelleme:** Yeni sürümün APK'sını eskisinin üzerine kur — ilerlemen korunur. (Uygulamayı *silersen* ilerleme de silinir; önce Profil ▸ Yedek ▸ "Yedeği kopyala".)
 4. **Sesli okuma** için telefonda Japonca ses gerekir: Ayarlar ▸ Erişilebilirlik / Sistem ▸ *Metin okuma çıkışı* ▸ Google konuşma hizmetleri ▸ *Ses verilerini yükle* ▸ Japonca.
@@ -69,7 +69,7 @@ git tag v0.2-beta
 git push origin v0.2-beta
 ```
 
-Birkaç dakika sonra APK, Releases sayfasında **Beta 0.2** başlığıyla (ön sürüm olarak) `Megumi-0.2-beta.apk` adıyla çıkar. Sonu `-beta` olan etiketler "Beta x.y" ön sürümü olarak, `v1.0.0` gibi etiketler normal sürüm olarak yayınlanır. Her sürümde numarayı artır ve `www/app.js` içindeki `APP_VERSION`'ı da güncelle.
+Birkaç dakika sonra APK, Releases sayfasında **Megumi Language Beta 0.2** başlığıyla (ön sürüm olarak) `MegumiLanguage-0.2-beta.apk` adıyla çıkar. Sonu `-beta` olan etiketler "Beta x.y" ön sürümü olarak, `v1.0.0` gibi etiketler normal sürüm olarak yayınlanır. Her sürümde numarayı artır ve `www/app.js` içindeki `APP_VERSION`'ı da güncelle.
 
 ### İmzalama anahtarı (bir kez)
 

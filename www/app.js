@@ -603,7 +603,7 @@ function renderHome() {
   };
   return `
   <header class="top">
-    <div><div class="jp hello">${S.xp ? 'おかえり！' : 'ようこそ！'}</div><h1>${S.xp ? bi('Tekrar hoş geldin', 'Welcome back') : bi('Megumi\'ye hoş geldin', 'Welcome to Megumi')}</h1></div>
+    <div><div class="jp hello">${S.xp ? 'おかえり！' : 'ようこそ！'}</div><h1>${S.xp ? bi('Tekrar hoş geldin', 'Welcome back') : bi('Megumi Language\'a hoş geldin', 'Welcome to Megumi Language')}</h1></div>
     <div class="chips">
       <span class="chip" title="Günlük seri / Day streak">🔥 ${streakNow()}</span><span class="chip" title="XP">⭐ ${S.xp}</span>
       <button class="icon-btn" data-a="tab" data-id="profile" aria-label="Profil / Profile">${IC.user}</button>
@@ -824,7 +824,7 @@ function renderProfile() {
     <button class="btn ghost" data-a="backupImport">${biI('Yedeği yükle', 'Restore backup')}</button>
   </div>
   <button class="btn danger" data-a="reset">${biI('İlerlemeyi sıfırla', 'Reset progress')}</button>
-  <p class="muted small center" style="margin-top:18px">Megumi ${APP_VERSION}<br>${bi('Çizgi sırası verisi: KanjiVG (Ulrich Apel), CC BY-SA 3.0', 'Stroke order data: KanjiVG (Ulrich Apel), CC BY-SA 3.0')}</p>`;
+  <p class="muted small center" style="margin-top:18px">Megumi Language ${APP_VERSION} · ${biI('Megumi Projesi', 'Megumi Project')}<br>${bi('Çizgi sırası verisi: KanjiVG (Ulrich Apel), CC BY-SA 3.0', 'Stroke order data: KanjiVG (Ulrich Apel), CC BY-SA 3.0')}</p>`;
 }
 
 function studyCard(it, revealed) {
@@ -1197,7 +1197,7 @@ const A = {
       save();
       toast(bi('Yedek yüklendi.', 'Backup restored.'));
     } catch {
-      toast(bi('Bu metin geçerli bir Megumi yedeği değil.', 'That is not a valid Megumi backup.'));
+      toast(bi('Bu metin geçerli bir Megumi Language yedeği değil.', 'That is not a valid Megumi Language backup.'));
       return false;
     }
   },

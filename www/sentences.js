@@ -1,4 +1,4 @@
-// Megumi — Günlük cümle havuzu (yazma pratiği)
+// Megumi Language — Günlük cümle havuzu (yazma pratiği)
 // Biçim: kelimeler boşlukla ayrılır (yalnızca romaji için; Japonca metinde boşluk yok).
 //   漢字[okunuş]  → kanji öğrenildiyse kanjiyle, öğrenilmediyse okunuşuyla (kana) yazılır
 //   {は} {へ}     → ek olarak "wa" / "e" okunan は / へ

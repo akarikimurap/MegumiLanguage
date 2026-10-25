@@ -1,4 +1,4 @@
-// Megumi — Kana kelime havuzu (egzersiz sonrası kelime ezberi)
+// Megumi Language — Kana kelime havuzu (egzersiz sonrası kelime ezberi)
 // [kana, tr, en, kanji?]  — romaji otomatik üretilir.
 // Uygulama, yalnızca öğrenilmiş + o egzersizde çalışılan harflerle yazılabilen kelimeleri seçer.
 // VOCAB'daki kelimeler ve kanji örnek kelimeleri de havuza otomatik eklenir.
