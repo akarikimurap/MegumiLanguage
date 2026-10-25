@@ -13,7 +13,10 @@ copy(path.join(nm, '@capacitor/core/dist/capacitor.js'), path.join(root, 'www/ca
 
 const kdir = path.join(root, 'www/vendor/kuromoji');
 copy(path.join(nm, 'kuromoji/build/kuromoji.js'), path.join(kdir, 'kuromoji.js'));
-for (const f of fs.readdirSync(path.join(nm, 'kuromoji/dict'))) copy(path.join(nm, 'kuromoji/dict', f), path.join(kdir, 'dict', f));
+// Android derleyicisi (aapt) ".gz" uzantılı dosyaları APK'ya açarak ve uzantısız koyar; bu yüzden ".bin" ekliyoruz.
+// Uygulama, kuromoji'nin istediği "*.dat.gz" adreslerini "*.dat.gz.bin"e yönlendirir (www/app.js → loadTokenizer).
+fs.rmSync(path.join(kdir, 'dict'), { recursive: true, force: true });
+for (const f of fs.readdirSync(path.join(nm, 'kuromoji/dict'))) copy(path.join(nm, 'kuromoji/dict', f), path.join(kdir, 'dict', f + '.bin'));
 // Lisans ve mecab-ipadic bildirimi uygulamayla birlikte dağıtılmalı
 copy(path.join(nm, 'kuromoji/NOTICE.md'), path.join(kdir, 'NOTICE.md'));
 copy(path.join(nm, 'kuromoji/LICENSE-2.0.txt'), path.join(kdir, 'LICENSE-2.0.txt'));

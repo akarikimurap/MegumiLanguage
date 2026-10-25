@@ -2,11 +2,11 @@
 
 **Megumi Language**, **Megumi Projesi**'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır, Android için APK olarak da indirilebilir.
 
-> 🧪 **Şu anki sürüm: Megumi Language Beta 0.2** — uygulama deneme aşamasında, hatalar olabilir.
+> 🧪 **Şu anki sürüm: Megumi Language Beta 0.2.1** — uygulama deneme aşamasında, hatalar olabilir.
 
 ## 📱 Telefona kurulum (APK)
 
-1. Bu deponun [**Releases**](../../releases) sayfasını aç ve en son sürümdeki `MegumiLanguage-….apk` dosyasını (ör. `MegumiLanguage-0.2-beta.apk`) telefonuna indir.
+1. Bu deponun [**Releases**](../../releases) sayfasını aç ve en son sürümdeki `MegumiLanguage-….apk` dosyasını (ör. `MegumiLanguage-0.2.1-beta.apk`) telefonuna indir.
 2. İndirilen dosyayı aç. Android ilk kez "bilinmeyen uygulamaları yükleme" izni ister, tarayıcına veya Dosyalar uygulamasına bu izni ver.
 3. **Güncelleme:** Yeni sürümün APK'sını eskisinin üzerine kur — ilerlemen korunur. (Uygulamayı *silersen* ilerleme de silinir, önce Profil ▸ Yedek ▸ "Yedeği kopyala".)
 4. **Sesli okuma** için telefonda Japonca ses gerekir: Ayarlar ▸ Erişilebilirlik / Sistem ▸ *Metin okuma çıkışı* ▸ Google konuşma hizmetleri ▸ *Ses verilerini yükle* ▸ Japonca.

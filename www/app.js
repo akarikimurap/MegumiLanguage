@@ -3,7 +3,7 @@
 
 const app = document.getElementById('app');
 const toastEl = document.getElementById('toast');
-const APP_VERSION = 'Beta 0.2';
+const APP_VERSION = 'Beta 0.2.1';
 const STORE = 'megumi.v1';
 const DAY = 864e5;
 const INTERVALS = [0, 1, 2, 4, 8, 16, 32]; // gün; kutu numarasına göre
@@ -858,8 +858,19 @@ function ownWord(...forms) {
 
 // Yapıştırılan metinler için kuromoji (yalnızca gerektiğinde yüklenir)
 let tokP = null;
+// Sözlük dosyaları ".dat.gz.bin" adıyla dağıtılır (Android'in .gz dosyalarını açmasını önlemek için); kuromoji'nin isteklerini yönlendir
+function redirectKuromojiDict() {
+  const open = XMLHttpRequest.prototype.open;
+  if (open.__megumi) return;
+  XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+    if (typeof url === 'string' && /vendor\/kuromoji\/dict\/[^/]+\.dat\.gz$/.test(url)) url += '.bin';
+    return open.call(this, method, url, ...rest);
+  };
+  XMLHttpRequest.prototype.open.__megumi = true;
+}
 const loadTokenizer = () => tokP ??= loadScript('vendor/kuromoji/kuromoji.js')
-  .then(() => new Promise((res, rej) => window.kuromoji.builder({ dicPath: 'vendor/kuromoji/dict/' }).build((e, t) => e ? rej(e) : res(t))));
+  .then(() => new Promise((res, rej) => { redirectKuromojiDict(); window.kuromoji.builder({ dicPath: 'vendor/kuromoji/dict/' }).build((e, t) => e ? rej(e) : res(t)); }))
+  .catch(e => { tokP = null; throw e; });
 const POS_CODE = { 名詞: 'n', 動詞: 'v', 形容詞: 'a', 副詞: 'adv', 助詞: 'p', 助動詞: 'aux', 記号: 's', 接続詞: 'conj', 連体詞: 'adn', 感動詞: 'int', 接頭詞: 'pre', フィラー: 'f' };
 const SPECIAL_READ = { 二人: 'ふたり', 一人: 'ひとり', 今日: 'きょう', 明日: 'あした', 昨日: 'きのう', 大人: 'おとな', 今朝: 'けさ', 今年: 'ことし', 上手: 'じょうず', 下手: 'へた', 眼鏡: 'めがね' };
 function tokenizePara(tok, para) {
