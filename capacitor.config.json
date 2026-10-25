@@ -1,0 +1,8 @@
+{
+  "appId": "app.megumi.japonca",
+  "appName": "Megumi",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#fbf7f4"
+  }
+}

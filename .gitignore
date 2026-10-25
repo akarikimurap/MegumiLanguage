@@ -1,0 +1,13 @@
+node_modules/
+# Android projesi derleme sırasında (GitHub Actions) üretilir
+android/
+# KanjiVG indirme önbelleği
+tools/.kvg-cache/
+# İmzalama anahtarı — ASLA depoya ekleme
+*.jks
+*.keystore
+keys/
+# Yerel araç ayarları
+.claude/
+.DS_Store
+Thumbs.db
