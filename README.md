@@ -78,7 +78,9 @@ npm run strokes
 
 ## Yeni sürüm yayınlama (APK)
 
-APK, GitHub Actions üzerinde derlenir, bilgisayarında Android SDK gerekmez. Bir sürüm etiketi gönder:
+Tüm sürümlerin güncelleme notları: [CHANGELOG.md](CHANGELOG.md)
+
+APK, GitHub Actions üzerinde derlenir, bilgisayarında Android SDK gerekmez. Önce `CHANGELOG.md`'nin en üstüne yeni sürümün notlarını `## Beta 0.3 (v0.3-beta) — tarih` biçiminde ekle (bu bölüm sürüm sayfasına otomatik konur). Sonra bir sürüm etiketi gönder:
 
 ```bash
 git tag v0.3-beta

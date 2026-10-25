@@ -88,6 +88,11 @@ jobs:
           name: MegumiLanguage-${{ env.VERSION_NAME }}
           path: MegumiLanguage-*.apk
 
+      # Sürüm notu: CHANGELOG.md'deki ilgili bölüm + kurulum adımları
+      - name: Sürüm notlarını hazırla
+        if: github.ref_type == 'tag'
+        run: node tools/release-notes.mjs "$GITHUB_REF_NAME" > release-notes.md
+
       - name: Sürümü yayınla
         if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v3
@@ -95,9 +100,4 @@ jobs:
           name: ${{ env.RELEASE_NAME }}
           prerelease: ${{ env.PRERELEASE }}
           files: MegumiLanguage-*.apk
-          body: |
-            ${{ env.PRERELEASE == 'true' && '🧪 **Beta sürüm** — denemek içindir; hatalar olabilir. Geri bildirimlerini Issues sekmesinden yazabilirsin.' || '' }}
-
-            📱 **Kurulum:** Aşağıdaki `MegumiLanguage-${{ env.VERSION_NAME }}.apk` dosyasını telefonuna indirip aç.
-            İlk kurulumda Android "bilinmeyen kaynaklardan uygulama yükleme" izni isteyecek; tarayıcına (veya Dosyalar uygulamasına) bu izni ver.
-            Güncelleme için yeni APK'yı eskisinin üzerine kurman yeterli — ilerlemen korunur.
+          body_path: release-notes.md
