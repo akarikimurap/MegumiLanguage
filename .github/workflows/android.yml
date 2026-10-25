@@ -48,7 +48,12 @@ jobs:
           # versionCode her derlemede artar; böylece yeni APK eskisinin üzerine kurulabilir
           sed -i "s/versionCode 1$/versionCode ${GITHUB_RUN_NUMBER}/; s/versionName \"1.0\"/versionName \"${VERSION_NAME}\"/" android/app/build.gradle
           grep -nE "versionCode|versionName" android/app/build.gradle
+          # v0.1-beta → "Beta 0.1" (ön sürüm), v1.0.0 → "Megumi 1.0.0"
+          if [[ "$VERSION_NAME" == *-beta ]]; then RELEASE_NAME="Beta ${VERSION_NAME%-beta}"; PRERELEASE=true
+          else RELEASE_NAME="Megumi ${VERSION_NAME}"; PRERELEASE=false; fi
           echo "VERSION_NAME=${VERSION_NAME}" >> "$GITHUB_ENV"
+          echo "RELEASE_NAME=${RELEASE_NAME}" >> "$GITHUB_ENV"
+          echo "PRERELEASE=${PRERELEASE}" >> "$GITHUB_ENV"
 
       - name: APK derle
         working-directory: android
@@ -74,17 +79,21 @@ jobs:
           "$BT/apksigner" verify "Megumi-${VERSION_NAME}.apk"
           rm -f megumi.jks aligned.apk
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Megumi-${{ env.VERSION_NAME }}
           path: Megumi-*.apk
 
       - name: Sürümü yayınla
         if: github.ref_type == 'tag'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
+          name: ${{ env.RELEASE_NAME }}
+          prerelease: ${{ env.PRERELEASE }}
           files: Megumi-*.apk
           body: |
+            ${{ env.PRERELEASE == 'true' && '🧪 **Beta sürüm** — denemek içindir; hatalar olabilir. Geri bildirimlerini Issues sekmesinden yazabilirsin.' || '' }}
+
             📱 **Kurulum:** Aşağıdaki `Megumi-${{ env.VERSION_NAME }}.apk` dosyasını telefonuna indirip aç.
             İlk kurulumda Android "bilinmeyen kaynaklardan uygulama yükleme" izni isteyecek; tarayıcına (veya Dosyalar uygulamasına) bu izni ver.
             Güncelleme için yeni APK'yı eskisinin üzerine kurman yeterli — ilerlemen korunur.

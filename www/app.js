@@ -3,6 +3,7 @@
 
 const app = document.getElementById('app');
 const toastEl = document.getElementById('toast');
+const APP_VERSION = 'Beta 0.1';
 const STORE = 'megumi.v1';
 const DAY = 864e5;
 const INTERVALS = [0, 1, 2, 4, 8, 16, 32]; // gün; kutu numarasına göre
@@ -823,7 +824,7 @@ function renderProfile() {
     <button class="btn ghost" data-a="backupImport">${biI('Yedeği yükle', 'Restore backup')}</button>
   </div>
   <button class="btn danger" data-a="reset">${biI('İlerlemeyi sıfırla', 'Reset progress')}</button>
-  <p class="muted small center" style="margin-top:18px">${bi('Çizgi sırası verisi: KanjiVG (Ulrich Apel), CC BY-SA 3.0', 'Stroke order data: KanjiVG (Ulrich Apel), CC BY-SA 3.0')}</p>`;
+  <p class="muted small center" style="margin-top:18px">Megumi ${APP_VERSION}<br>${bi('Çizgi sırası verisi: KanjiVG (Ulrich Apel), CC BY-SA 3.0', 'Stroke order data: KanjiVG (Ulrich Apel), CC BY-SA 3.0')}</p>`;
 }
 
 function studyCard(it, revealed) {
