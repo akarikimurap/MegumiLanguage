@@ -1,6 +1,6 @@
 # Megumi Language (恵み) — Türkçe ile Japonca
 
-**Megumi Language**, **Megumi Projesi**'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır, Android için APK olarak da indirilebilir.
+**Megumi Language**, [**Megumi Projesi**](https://discord.gg/4gzM6eZgQ8)'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır, Android için APK olarak da indirilebilir.
 
 > 🧪 **Şu anki sürüm: Megumi Language Beta 0.2.1** — uygulama deneme aşamasında, hatalar olabilir.
 
