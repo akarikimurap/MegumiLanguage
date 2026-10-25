@@ -1,25 +1,25 @@
 # Megumi Language (恵み) — Türkçe ile Japonca
 
-**Megumi Language**, **Megumi Projesi**'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır; Android için APK olarak da indirilebilir.
+**Megumi Language**, **Megumi Projesi**'nin dil öğrenme uygulamasıdır. Türkçe ana dil, İngilizce yardımcı dil olarak tasarlanmış, telefona göre yapılmış bir Japonca öğrenme uygulamasıdır. Tarayıcıda çalışır, Android için APK olarak da indirilebilir.
 
-> 🧪 **Şu anki sürüm: Megumi Language Beta 0.1** — uygulama deneme aşamasında; hatalar olabilir.
+> 🧪 **Şu anki sürüm: Megumi Language Beta 0.1** — uygulama deneme aşamasında, hatalar olabilir.
 
 ## 📱 Telefona kurulum (APK)
 
 1. Bu deponun [**Releases**](../../releases) sayfasını aç ve en son sürümdeki `MegumiLanguage-….apk` dosyasını (ör. `MegumiLanguage-0.1-beta.apk`) telefonuna indir.
-2. İndirilen dosyayı aç. Android ilk kez "bilinmeyen uygulamaları yükleme" izni ister; tarayıcına veya Dosyalar uygulamasına bu izni ver.
-3. **Güncelleme:** Yeni sürümün APK'sını eskisinin üzerine kur — ilerlemen korunur. (Uygulamayı *silersen* ilerleme de silinir; önce Profil ▸ Yedek ▸ "Yedeği kopyala".)
+2. İndirilen dosyayı aç. Android ilk kez "bilinmeyen uygulamaları yükleme" izni ister, tarayıcına veya Dosyalar uygulamasına bu izni ver.
+3. **Güncelleme:** Yeni sürümün APK'sını eskisinin üzerine kur — ilerlemen korunur. (Uygulamayı *silersen* ilerleme de silinir, önce Profil ▸ Yedek ▸ "Yedeği kopyala".)
 4. **Sesli okuma** için telefonda Japonca ses gerekir: Ayarlar ▸ Erişilebilirlik / Sistem ▸ *Metin okuma çıkışı* ▸ Google konuşma hizmetleri ▸ *Ses verilerini yükle* ▸ Japonca.
 
 ## Özellikler
 
-- **Kana**: Hiragana ve katakana tabloları; her harfin romajisi, **Türk alfabesiyle okunuşu** (shi → şi, chi → çi, ji → ci) ve telaffuz ipuçları.
+- **Kana**: Hiragana ve katakana tabloları, her harfin romajisi, **Türk alfabesiyle okunuşu** (shi → şi, chi → çi, ji → ci) ve telaffuz ipuçları.
 - **Dersler**: 4 ünite, 21 ders (alfabe, kelime, gramer). Gramer konuları **Türkçeyle karşılaştırılarak** anlatılır (を ≈ -(y)ı, で ≈ -de, の ≈ -(n)ın, か ≈ mı).
-- **Yazma alıştırmaları**: Parmakla yazma alanı; çizgi **sırası ve yönü** kontrol edilir. Üç mod: *İzle*, *Takip et*, *Ezbere* (iki hatadan sonra ipucu). Hata sayısı tekrar takvimini etkiler.
+- **Yazma alıştırmaları**: Parmakla yazma alanı, çizgi **sırası ve yönü** kontrol edilir. Üç mod: *İzle*, *Takip et*, *Ezbere* (iki hatadan sonra ipucu). Hata sayısı tekrar takvimini etkiler.
 - **Günlük kanji**: 192 kanji (N5–N4). Her gün seçilen sayıda yeni kanji (Profil'den 1–5): anlam, on/kun okunuşları, örnek kelimeler, akılda tutma ipucu → çizgi sırasını izle → üzerinden geç → ezbere yaz → kısa test.
 - **Egzersiz sonrası kelime ezberi**: Her kana dersi, yazma pratiği, kana testi ve günlük kanjiden sonra, *yalnızca bildiğin ve o egzersizde çalıştığın harflerle yazılabilen* kelimeler gelir. Kelime kartları → anlam sorusu → harf karolarıyla yazma.
-- **Yaz sekmesi**: Kelimeleri ve günlük cümleleri harf harf, ezbere yazarsın. Yalnızca öğrendiğin kana ve kanjilerle yazılabilen kelime/cümleler gelir; öğrenmediğin kanjiler kana ile yazılır, öğrendikçe kanjili hâle gelir.
-- **Aralıklı tekrar**: Leitner kutuları (1 → 6); bildiğin kartlar daha seyrek gelir.
+- **Yaz sekmesi**: Kelimeleri ve günlük cümleleri harf harf, ezbere yazarsın. Yalnızca öğrendiğin kana ve kanjilerle yazılabilen kelime/cümleler gelir, öğrenmediğin kanjiler kana ile yazılır, öğrendikçe kanjili hâle gelir.
+- **Aralıklı tekrar**: Leitner kutuları (1 → 6), bildiğin kartlar daha seyrek gelir.
 - **İki dilli arayüz**: Her açıklamada önce Türkçe, altında İngilizce. Profil'den İngilizce, romaji ve Türkçe okunuş ayrı ayrı kapatılabilir.
 - Seri (🔥), XP, günlük hedef, ilerleme yedeği (kopyala / yapıştır).
 
@@ -59,7 +59,7 @@ npm run strokes
 
 ## Yeni sürüm yayınlama (APK)
 
-APK, GitHub Actions üzerinde derlenir; bilgisayarında Android SDK gerekmez. Bir sürüm etiketi gönder:
+APK, GitHub Actions üzerinde derlenir, bilgisayarında Android SDK gerekmez. Bir sürüm etiketi gönder:
 
 ```bash
 git tag v0.2-beta
