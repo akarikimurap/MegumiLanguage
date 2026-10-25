@@ -370,3 +370,86 @@ ruby rt { font-size: .5em; color: var(--muted); }
 .sent-row { display: flex; flex-direction: column; gap: 2px; width: 100%; padding: 12px 14px; margin-bottom: 8px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); text-align: left; position: relative; }
 .sent-row .jp { font-size: 1.15rem; padding-right: 44px; }
 .sp-count { position: absolute; right: 12px; top: 12px; font-size: .75rem; color: var(--muted); }
+
+/* ---------- Sub tabs ---------- */
+.subtabs { margin: 0 0 16px; }
+.subtabs .en-i { font-size: .8em; }
+
+/* ---------- Reading ---------- */
+.big-title { font-size: 1.4rem; font-weight: 700; }
+.story { display: block; width: 100%; text-align: left; padding: 16px; margin-bottom: 12px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+.st-title { font-size: 1.35rem; font-weight: 700; }
+.st-sub { font-weight: 600; margin: 2px 0 2px; }
+.st-desc { margin: 8px 0 2px; }
+.story .bar { margin-top: 6px; height: 6px; }
+.lvl { font-size: .72rem; font-weight: 700; border-radius: 99px; padding: 3px 9px; white-space: nowrap; }
+.lvl .en-i { color: inherit; opacity: .75; }
+.lvl.l1 { background: var(--ok-bg); color: var(--ok); }
+.lvl.l2 { background: var(--accent-soft); color: var(--accent); }
+.lvl.l3 { background: var(--surface-2); color: var(--text); }
+.text-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.tr-open { flex: 1; display: flex; flex-direction: column; gap: 2px; text-align: left; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); }
+.input { width: 100%; display: block; margin: 8px 0; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font: inherit; resize: vertical; }
+.paste-sheet { text-align: left; }
+.paste-sheet h3 { margin: 0 40px 6px 0; }
+.reader-head { gap: 10px; }
+.rh-title { flex: 1; min-width: 0; line-height: 1.2; }
+.rh-title .jp { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.icon-btn.on { background: var(--accent); color: #fff; }
+.icon-btn.sm { width: 36px; height: 36px; font-size: .8rem; font-weight: 700; }
+.reader-tools { display: flex; align-items: center; gap: 6px; padding: 0 16px 8px; position: sticky; top: 70px; background: var(--bg); z-index: 4; }
+.seg.mini { flex: 1; margin: 0; padding: 3px; }
+.seg.mini button { padding: 5px 2px; font-size: .78rem; }
+.seg.mini .en { font-size: .64rem; }
+.reader-body { font-size: calc(15px + var(--rs, 2) * 2px); line-height: 2.25; }
+.reader-body .para { margin: 0 0 1em; padding: 2px 4px; border-radius: 8px; transition: background .3s; }
+.reader-body .para.playing { background: var(--accent-soft); }
+.reader-body ruby rt { font-size: .5em; color: var(--accent); font-weight: 500; }
+.tk { cursor: pointer; border-radius: 4px; }
+.tk:hover { background: var(--surface-2); }
+.tk.sel { background: var(--accent-soft); box-shadow: 0 2px 0 var(--accent); }
+.pplay { border: 0; background: none; color: var(--muted); font-size: .65em; padding: 0 6px 0 0; vertical-align: middle; opacity: .55; }
+.reader-loading { padding-top: 60px; }
+.spinner { width: 36px; height: 36px; margin: 0 auto 16px; border-radius: 50%; border: 4px solid var(--surface-2); border-top-color: var(--accent); animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.tok-sheet { text-align: center; }
+.tok-word { font-size: 2.2rem; font-weight: 600; line-height: 1.6; margin-top: 6px; }
+.tok-word rt { font-size: .45em; color: var(--accent); }
+.tok-meta { font-size: .85rem; color: var(--muted); margin: 6px 0 4px; }
+.tok-meta .en-i { font-size: .9em; }
+.dict-row { text-align: left; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; margin-top: 8px; }
+.dict-row .jp { font-weight: 600; }
+.tok-kanji { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 12px; }
+.kchip { display: inline-flex; flex-direction: column; align-items: center; min-width: 64px; padding: 6px 8px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
+.kchip .jp { font-size: 1.5rem; line-height: 1.2; }
+.kchip small { font-size: .68rem; color: var(--muted); }
+.kchip.known { border-color: var(--ok); background: var(--ok-bg); }
+.kchip.off { opacity: .55; }
+
+/* ---------- Listening ---------- */
+.listen-box { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.play-big { width: 88px; height: 88px; border-radius: 50%; border: 0; background: var(--accent); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(217, 79, 112, .35); }
+.play-big svg { width: 40px; height: 40px; }
+.reveal { margin-top: 10px; }
+.reveal ruby rt { font-size: .45em; color: var(--accent); }
+.quick { margin-bottom: 12px; }
+.quick .wtile { align-items: center; text-align: center; }
+
+/* ---------- Dictionary & books ---------- */
+.dict-search { display: flex; gap: 8px; align-items: center; }
+.dict-search .input { margin: 0; flex: 1; min-width: 0; }
+.dict-search .btn { width: auto; margin: 0; padding: 12px 16px; flex-shrink: 0; }
+.dict-search .btn .en-i { display: none; }
+.dres { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; margin-bottom: 8px; }
+.dres-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dres-w { font-size: 1.3rem; font-weight: 600; line-height: 1.7; }
+.dres-w rt { font-size: .5em; color: var(--accent); }
+.dres-act { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+.dres-g { font-size: .92rem; margin-top: 2px; }
+.dres .tag { margin: 0; }
+.jisho-link { color: var(--accent); font-weight: 600; text-decoration: none; }
+.jisho-link.block { display: block; margin-top: 12px; font-size: .9rem; }
+.file-btn { cursor: pointer; }
+.import-msg { text-align: center; padding: 16px 0; }
+.ch-row { padding-top: 0; top: 118px; }
+.ch-sel { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font: inherit; font-size: .9rem; }

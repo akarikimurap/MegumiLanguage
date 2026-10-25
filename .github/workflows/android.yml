@@ -36,6 +36,10 @@ jobs:
       - name: Bağımlılıkları kur
         run: npm ci
 
+      # Okuyucu sözlüğü (JMdict) depoya girmez; her derlemede üretilir
+      - name: Sözlüğü üret
+        run: npm run dict
+
       - name: Android projesini ve simgeleri oluştur
         run: |
           npx cap add android

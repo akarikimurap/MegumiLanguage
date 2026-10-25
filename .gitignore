@@ -11,3 +11,9 @@ keys/
 .claude/
 .DS_Store
 Thumbs.db
+# Derleme sırasında üretilen kütüphaneler (npm install / npm run dict)
+www/vendor/
+www/LICENSE.txt
+www/THIRD_PARTY_NOTICES.md
+# Araçların indirme önbelleği (JMdict, KANJIDIC2, Aozora)
+tools/.cache/
